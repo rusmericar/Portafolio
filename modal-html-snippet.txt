@@ -1,0 +1,47 @@
+
+    <!-- Project Details Modal -->
+    <div id="projectModal" class="project-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="project-modal-overlay" onclick="closeProjectModal()"></div>
+        <div class="project-modal-content">
+            <button class="project-modal-close" onclick="closeProjectModal()" aria-label="Cerrar">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            
+            <div class="project-modal-header">
+                <h2 id="modalTitle" class="project-modal-title"></h2>
+                <p class="project-modal-subtitle"></p>
+            </div>
+            
+            <div class="project-modal-body">
+                <div class="project-modal-media"></div>
+                
+                <div class="project-modal-info">
+                    <div class="project-modal-section">
+                        <h3>Descripción</h3>
+                        <p class="project-description"></p>
+                    </div>
+                    
+                    <div class="project-modal-section">
+                        <h3>Objetivos</h3>
+                        <ul class="project-objectives"></ul>
+                    </div>
+                    
+                    <div class="project-modal-section">
+                        <h3>Servicios</h3>
+                        <ul class="project-services"></ul>
+                    </div>
+                    
+                    <div class="project-modal-section project-results">
+                        <h3>Resultados</h3>
+                        <div class="project-results-grid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Data and Modal Functions -->
+    <script src="projects.js"></script>

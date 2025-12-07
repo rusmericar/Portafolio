@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio profesional de Rusmeri Cárdenas - Marketing y Publicidad">
+    <title>Rusmeri Cárdenas | Marketing & Publicidad</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header role="banner">
+        <div class="container">
+            <img src="Assets\rus.png" alt="Foto de perfil de Rusmeri Cárdenas" class="hero-avatar"
+                data-src-original="https://rusmericardenas.wixsite.com/rusmeri-cardenas/avatar.jpg">
+
+            <h1 class="hero-name">Rusmeri Cárdenas</h1>
+            <p class="hero-subtitle">Profesional en Marketing & Publicidad</p>
+
+            <button class="btn" onclick="downloadCV()" aria-label="Descargar Curriculum Vitae">
+                Descargar CV
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">Acerca de mí</h2>
+                <div class="about-content">
+                    <p>
+                        Soy una profesional apasionada con sólida experiencia en estrategias de marketing y publicidad.
+                        Me especializo en crear conexiones auténticas entre marcas y consumidores a través de soluciones
+                        creativas
+                        y análisis de datos. Mi objetivo es impulsar el crecimiento de los negocios mediante una
+                        comunicación efectiva
+                        y campañas de alto impacto.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Habilidades</h2>
+                <div class="skills-container">
+                    <span class="skill-badge">Estrategia Digital</span>
+                    <span class="skill-badge">Gestión de Marcas</span>
+                    <span class="skill-badge">Redes Sociales</span>
+                    <span class="skill-badge">Publicidad Online</span>
+                    <span class="skill-badge">Relaciones Públicas</span>
+                    <span class="skill-badge">Análisis de Mercado</span>
+                    <span class="skill-badge">Creatividad</span>
+                    <span class="skill-badge">Comunicación</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="brands" class="section">
+            <div class="container">
+                <h2 class="section-title">Marcas con las que trabajé</h2>
+                <div class="brands-grid">
+                    <div class="brand-item" onclick="openLightbox(this)">
+                        <img src="Assets\CasaTerra.png" alt="Logo Marca 1"
+                            data-src-original="https://rusmericardenas.wixsite.com/.../marca1.jpg">
+                    </div>
+                    <div class="brand-item" onclick="openLightbox(this)">
+                        <img src="Assets\Delicranch.png" alt="Logo Marca 2"
+                            data-src-original="https://rusmericardenas.wixsite.com/.../marca2.jpg">
+                    </div>
+                    <div class="brand-item" onclick="openLightbox(this)">
+                        <img src="Assets\Entel.png" alt="Logo Marca 3"
+                            data-src-original="https://rusmericardenas.wixsite.com/.../marca3.jpg">
+                    </div>
+                    <div class="brand-item" onclick="openLightbox(this)">
+                        <img src="Assets\ISM.png" alt="Logo Marca 4"
+                            data-src-original="https://rusmericardenas.wixsite.com/.../marca4.jpg">
+                    </div>
+                    <div class="brand-item" onclick="openLightbox(this)">
+                        <img src="Assets\max.PNG" alt="Logo Marca 4"
+                            data-src-original="https://rusmericardenas.wixsite.com/.../marca4.jpg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Proyectos Destacados</h2>
+                <div class="projects-grid">
+
+                    <article class="project-card">
+                        <video src="Assets\ism.mp4" class="project-img" autoplay loop muted playsinline></video>
+
+                        <div class="project-info">
+                            <h3 class="project-title">ISM - Instituto San Martín</h3>
+                            <p class="project-desc">
+                                Gestión integral de redes sociales y creación de contenido educativo para instituto de
+                                educación superior.
+                            </p>
+                            <span class="project-link" onclick="openProjectModal('ism')" style="cursor: pointer;">Ver
+                                detalles</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <video src="Assets\casaterra.mp4" class="project-img" autoplay loop muted playsinline></video>
+                        <div class="project-info">
+                            <h3 class="project-title">Casa Terra</h3>
+                            <p class="project-desc">
+                                Estrategia de contenido y gestión de redes sociales para marca de bienes raíces enfocada
+                                en diseño y arquitectura.
+                            </p>
+                            <span class="project-link" onclick="openProjectModal('casaterra')"
+                                style="cursor: pointer;">Ver detalles</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <video src="Assets\deli.mp4" class="project-img" autoplay loop muted playsinline></video>
+                        <div class="project-info">
+                            <h3 class="project-title">Delicranch</h3>
+                            <p class="project-desc">
+                                Creación de contenido y estrategia digital para marca de alimentos saludables, enfocada
+                                en wellness y estilo de vida.
+                            </p>
+                            <span class="project-link" onclick="openProjectModal('delicranch')"
+                                style="cursor: pointer;">Ver detalles</span>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <aside id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📧</span>
+                    <a href="mailto:ejemplo@email.com">ejemplo@email.com</a>
+                </div>
+                <div class="contact-item">
+                    <span>📱</span>
+                    <a href="tel:+123456789">+51 999 999 999</a>
+                </div>
+                <div class="contact-item">
+                    <span>📍</span>
+                    <span>Lima, Perú</span>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="#" class="social-icon" aria-label="LinkedIn">IN</a>
+                <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+                <a href="#" class="social-icon" aria-label="Behance">BE</a>
+            </div>
+        </div>
+    </aside>
+
+    <footer>
+        <p>&copy; 2024 Rusmeri Cárdenas. Todos los derechos reservados.</p>
+    </footer>
+
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada de imagen">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img src="" alt="Imagen ampliada" class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script>
+        // --- Lightbox Logic ---
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            lightbox.focus();
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Cerrar con tecla ESC
+        document.addEventListener('keydown', function (event) {
+            if (event.key === "Escape" && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+
+        // Cerrar al hacer clic fuera de la imagen
+        lightbox.addEventListener('click', function (e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // --- Generador de PDF/CV Simulado ---
+        function downloadCV() {
+            const textContent = "Curriculum Vitae de Rusmeri Cárdenas\n\nExperiencia:\n- Especialista en Marketing\n- Gestión de Marcas\n\nContacto: ejemplo@email.com";
+            const blob = new Blob([textContent], { type: 'text/plain' });
+            const anchor = document.createElement('a');
+            anchor.download = "CV_Rusmeri_Cardenas.txt";
+            anchor.href = window.URL.createObjectURL(blob);
+            anchor.click();
+            window.URL.revokeObjectURL(anchor.href);
+        }
+    </script>
+
+    <!-- Project Details Modal -->
+    <div id="projectModal" class="project-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="project-modal-overlay" onclick="closeProjectModal()"></div>
+        <div class="project-modal-content">
+            <button class="project-modal-close" onclick="closeProjectModal()" aria-label="Cerrar">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            
+            <div class="project-modal-header">
+                <h2 id="modalTitle" class="project-modal-title"></h2>
+                <p class="project-modal-subtitle"></p>
+            </div>
+            
+            <div class="project-modal-body">
+                <div class="project-modal-media"></div>
+                
+                <div class="project-modal-info">
+                    <div class="project-modal-section">
+                        <h3>Descripción</h3>
+                        <p class="project-description"></p>
+                    </div>
+                    
+                    <div class="project-modal-section">
+                        <h3>Objetivos</h3>
+                        <ul class="project-objectives"></ul>
+                    </div>
+                    
+                    <div class="project-modal-section">
+                        <h3>Servicios</h3>
+                        <ul class="project-services"></ul>
+                    </div>
+                    
+                    <div class="project-modal-section project-results">
+                        <h3>Resultados</h3>
+                        <div class="project-results-grid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Data and Modal Functions -->
+    <script src="projects.js"></script>
+
+</body>
+
+</html>
