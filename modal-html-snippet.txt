@@ -24,15 +24,7 @@
                         <p class="project-description"></p>
                     </div>
                     
-                    <div class="project-modal-section">
-                        <h3>Objetivos</h3>
-                        <ul class="project-objectives"></ul>
-                    </div>
                     
-                    <div class="project-modal-section">
-                        <h3>Servicios</h3>
-                        <ul class="project-services"></ul>
-                    </div>
                     
                     <div class="project-modal-section project-results">
                         <h3>Resultados</h3>

@@ -20,15 +20,15 @@
 
     <header role="banner">
         <div class="container">
-            <img src="Assets\rus.png" alt="Foto de perfil de Rusmeri Cárdenas" class="hero-avatar"
-                data-src-original="https://rusmericardenas.wixsite.com/rusmeri-cardenas/avatar.jpg">
+            <img src="Assets\Perfil.jpg" alt="Foto de perfil de Rusmeri Cárdenas" class="hero-avatar"
+                data-src-original="Assets\Perfil.jpg">
 
-            <h1 class="hero-name">Rusmeri Cárdenas</h1>
+            <h1 class="hero-name">Rusmeri Cardenas Quispe</h1>
             <p class="hero-subtitle">Profesional en Marketing & Publicidad</p>
 
-            <button class="btn" onclick="downloadCV()" aria-label="Descargar Curriculum Vitae">
+            <!--             <button class="btn" onclick="downloadCV()" aria-label="Descargar Curriculum Vitae">
                 Descargar CV
-            </button>
+            </button> -->
         </div>
     </header>
 
@@ -36,15 +36,56 @@
         <section id="about" class="section">
             <div class="container">
                 <h2 class="section-title">Acerca de mí</h2>
+
                 <div class="about-content">
                     <p>
-                        Soy una profesional apasionada con sólida experiencia en estrategias de marketing y publicidad.
-                        Me especializo en crear conexiones auténticas entre marcas y consumidores a través de soluciones
-                        creativas
-                        y análisis de datos. Mi objetivo es impulsar el crecimiento de los negocios mediante una
-                        comunicación efectiva
-                        y campañas de alto impacto.
+                        ¡Hola! Soy Rusmeri, publicista especializada en marketing digital, con enfoque en redacción
+                        creativa,
+                        estrategias de social media y producción de contenido.
+                        <br>
+                        Durante mis casi 3 años de experiencia, he desarrollado habilidades en las siguientes áreas:
                     </p>
+
+                    <div class="about-block">
+                        <h3>Estrategia y creatividad de campañas</h3>
+                        <p>
+                            He diseñado y ejecutado campañas digitales orientadas a objetivos como awareness, conversión
+                            y engagement.
+                        </p>
+                    </div>
+
+                    <div class="about-block">
+                        <h3>Creación de contenido</h3>
+                        <p>
+                            He desarrollado grillas de contenido con narrativa visual y coherencia de marca, adaptadas a
+                            plataformas digitales como social media, blogs y newsletters.
+                        </p>
+                    </div>
+
+                    <div class="about-block">
+                        <h3>Copywriting</h3>
+                        <p>
+                            Creo textos que conectan: desde mensajes creativos hasta piezas optimizadas para SEO.
+                        </p>
+                    </div>
+
+                    <div class="about-block">
+                        <h3>Redacción creativa</h3>
+                        <p>
+                            He escrito guiones para radio, televisión, redes sociales y manifiestos de marca, buscando
+                            siempre emocionar
+                            y comunicar con autenticidad.
+                        </p>
+                    </div>
+
+                    <div class="about-block">
+                        <h3>Gestión de redes sociales</h3>
+                        <p>
+                            He gestionado comunidades impulsando la conexión entre la marca y su audiencia, incorporando
+                            la
+                            búsqueda de insights para potenciar el contenido.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -57,10 +98,12 @@
                     <span class="skill-badge">Gestión de Marcas</span>
                     <span class="skill-badge">Redes Sociales</span>
                     <span class="skill-badge">Publicidad Online</span>
-                    <span class="skill-badge">Relaciones Públicas</span>
                     <span class="skill-badge">Análisis de Mercado</span>
                     <span class="skill-badge">Creatividad</span>
-                    <span class="skill-badge">Comunicación</span>
+                    <span class="skill-badge">Copywriter</span>
+                    <span class="skill-badge">Redacción creativa</span>
+                    <span class="skill-badge">Email Marketing</span>
+                    <span class="skill-badge">Creación de campañas</span>
                 </div>
             </div>
         </section>
@@ -69,23 +112,23 @@
             <div class="container">
                 <h2 class="section-title">Marcas con las que trabajé</h2>
                 <div class="brands-grid">
-                    <div class="brand-item" onclick="openLightbox(this)">
+                    <div class="brand-item" onclick="openProjectModal('casaterra')">
                         <img src="Assets\CasaTerra.png" alt="Logo Marca 1"
                             data-src-original="https://rusmericardenas.wixsite.com/.../marca1.jpg">
                     </div>
-                    <div class="brand-item" onclick="openLightbox(this)">
+                    <div class="brand-item" onclick="openProjectModal('delicranch')">
                         <img src="Assets\Delicranch.png" alt="Logo Marca 2"
                             data-src-original="https://rusmericardenas.wixsite.com/.../marca2.jpg">
                     </div>
-                    <div class="brand-item" onclick="openLightbox(this)">
+                    <div class="brand-item" onclick="openProjectModal('entel')">
                         <img src="Assets\Entel.png" alt="Logo Marca 3"
                             data-src-original="https://rusmericardenas.wixsite.com/.../marca3.jpg">
                     </div>
-                    <div class="brand-item" onclick="openLightbox(this)">
+                    <div class="brand-item" onclick="openProjectModal('ism')">
                         <img src="Assets\ISM.png" alt="Logo Marca 4"
                             data-src-original="https://rusmericardenas.wixsite.com/.../marca4.jpg">
                     </div>
-                    <div class="brand-item" onclick="openLightbox(this)">
+                    <div class="brand-item" onclick="openProjectModal('max')">
                         <img src="Assets\max.PNG" alt="Logo Marca 4"
                             data-src-original="https://rusmericardenas.wixsite.com/.../marca4.jpg">
                     </div>
@@ -95,25 +138,13 @@
 
         <section id="projects" class="section">
             <div class="container">
-                <h2 class="section-title">Proyectos Destacados</h2>
+                <h2 class="section-title">Otros proyectos</h2>
                 <div class="projects-grid">
 
-                    <article class="project-card">
-                        <video src="Assets\ism.mp4" class="project-img" autoplay loop muted playsinline></video>
-
-                        <div class="project-info">
-                            <h3 class="project-title">ISM - Instituto San Martín</h3>
-                            <p class="project-desc">
-                                Gestión integral de redes sociales y creación de contenido educativo para instituto de
-                                educación superior.
-                            </p>
-                            <span class="project-link" onclick="openProjectModal('ism')" style="cursor: pointer;">Ver
-                                detalles</span>
-                        </div>
-                    </article>
 
                     <article class="project-card">
-                        <video src="Assets\casaterra.mp4" class="project-img" autoplay loop muted playsinline></video>
+                        <img src="Assets\CasaTerra.png" class="project-img">
+
                         <div class="project-info">
                             <h3 class="project-title">Casa Terra</h3>
                             <p class="project-desc">
@@ -126,17 +157,18 @@
                     </article>
 
                     <article class="project-card">
-                        <video src="Assets\deli.mp4" class="project-img" autoplay loop muted playsinline></video>
+                        <img src="Assets\Entel.png" class="project-img">
+
                         <div class="project-info">
-                            <h3 class="project-title">Delicranch</h3>
+                            <h3 class="project-title">Entel</h3>
                             <p class="project-desc">
-                                Creación de contenido y estrategia digital para marca de alimentos saludables, enfocada
-                                en wellness y estilo de vida.
+                                Gestión integral de redes sociales y creación de contenido para Entel.
                             </p>
-                            <span class="project-link" onclick="openProjectModal('delicranch')"
-                                style="cursor: pointer;">Ver detalles</span>
+                            <span class="project-link" onclick="openProjectModal('ism')" style="cursor: pointer;">Ver
+                                detalles</span>
                         </div>
                     </article>
+
 
                 </div>
             </div>
@@ -149,11 +181,11 @@
             <div class="contact-info">
                 <div class="contact-item">
                     <span>📧</span>
-                    <a href="mailto:ejemplo@email.com">ejemplo@email.com</a>
+                    <a href="mailto:ejemplo@email.com">rusmericardenas9@gmail.com</a>
                 </div>
                 <div class="contact-item">
                     <span>📱</span>
-                    <a href="tel:+123456789">+51 999 999 999</a>
+                    <a href="tel:+123456789">+51 950 701 919</a>
                 </div>
                 <div class="contact-item">
                     <span>📍</span>
@@ -161,17 +193,37 @@
                 </div>
             </div>
 
-            <div class="social-links">
+            <!--  <div class="social-links">
                 <a href="#" class="social-icon" aria-label="LinkedIn">IN</a>
                 <a href="#" class="social-icon" aria-label="Instagram">IG</a>
                 <a href="#" class="social-icon" aria-label="Behance">BE</a>
-            </div>
+            </div> -->
         </div>
     </aside>
 
     <footer>
-        <p>&copy; 2024 Rusmeri Cárdenas. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Rusmeri Cárdenas. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Theme Toggle Button -->
+    <!--     <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+      
+        <svg class="theme-icon moon" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      
+        <svg class="theme-icon sun" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+    </button> -->
 
     <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada de imagen">
         <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
@@ -179,6 +231,27 @@
     </div>
 
     <script>
+        // --- Theme Toggle Logic ---
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        // Check for saved preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+
+            // Save preference
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
         // --- Lightbox Logic ---
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
@@ -233,31 +306,31 @@
                     <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
             </button>
-            
+
             <div class="project-modal-header">
                 <h2 id="modalTitle" class="project-modal-title"></h2>
                 <p class="project-modal-subtitle"></p>
             </div>
-            
+
             <div class="project-modal-body">
                 <div class="project-modal-media"></div>
-                
+
                 <div class="project-modal-info">
                     <div class="project-modal-section">
                         <h3>Descripción</h3>
                         <p class="project-description"></p>
                     </div>
-                    
-                    <div class="project-modal-section">
+
+                    <!--  <div class="project-modal-section">
                         <h3>Objetivos</h3>
                         <ul class="project-objectives"></ul>
                     </div>
-                    
+
                     <div class="project-modal-section">
                         <h3>Servicios</h3>
                         <ul class="project-services"></ul>
-                    </div>
-                    
+                    </div> -->
+
                     <div class="project-modal-section project-results">
                         <h3>Resultados</h3>
                         <div class="project-results-grid"></div>

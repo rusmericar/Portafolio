@@ -1,10 +1,42 @@
 // Project Details Data
 const projectsData = {
     ism: {
-        title: "ISM - Instituto San Martín",
+        title: "ISM - Industrias San Miguel",
         subtitle: "Gestión de Redes Sociales y Contenido Educativo",
-        description: "Desarrollo de estrategia integral de social media para instituto de educación superior, incluyendo creación de contenido, gestión de comunidad y campañas de captación de estudiantes.",
-        video: "Assets/ism.mp4",
+        description: `Industrias San Miguel (ISM) es un conglomerado peruano líder, dueño de marcas icónicas —como ORO, KR y Agua Vida— que gozan de una fuerte recordación en el mercado nacional. El desafío central fue elevar su presencia digital para lograr una interacción robusta y un alto engagement en redes sociales.
+
+​Estrategia y Desarrollo
+
+Mi trabajo se centró en la estrategia digital, iniciando con  benchmarking de la competencia y las tendencias del sector. Este análisis fue clave para definir pilares de contenido únicos que se alinearon de manera precisa con la personalidad y valores de cada marca.
+A partir de esta base estratégica, desarrollé una matriz de contenido sistemática con el objetivo claro de construir una comunidad activa alrededor de cada producto.
+
+​Resultados
+
+El resultado fue la creación constante de contenido de valor mediante posts interactivos y dinámicas que incentivaron la participación activa de la audiencia. Esto garantizó un flujo de contenido organizado, coherente y que se tradujo en un alto nivel de conexión y engagement con los consumidores.`,
+        video: "Assets/ISM/ism.mp4",
+        galleries: [
+            [
+                { type: 'video', src: 'Assets/ISM/1.mp4', alt: 'ISM Video 1' },
+                { type: 'image', src: 'Assets/ISM/1.png', alt: 'ISM Asset 1' },
+                { type: 'video', src: 'Assets/ISM/2.mp4', alt: 'ISM Video 2' },
+                { type: 'image', src: 'Assets/ISM/2.png', alt: 'ISM Asset 2' },
+                { type: 'image', src: 'Assets/ISM/3.png', alt: 'ISM Asset 3' }
+            ],
+            [
+                { type: 'image', src: 'Assets/ISM/oro1.png', alt: 'ISM Oro 1' },
+                { type: 'image', src: 'Assets/ISM/oro2.png', alt: 'ISM Oro 2' },
+                { type: 'image', src: 'Assets/ISM/oro3.png', alt: 'ISM Oro 3' },
+                { type: 'video', src: 'Assets/ISM/orovideo.mp4', alt: 'ISM Oro Video' },
+                { type: 'video', src: 'Assets/ISM/orovideo2.mp4', alt: 'ISM Oro Video 2' }
+            ],
+            [
+                { type: 'image', src: 'Assets/ISM/vida1.png', alt: 'ISM Vida 1' },
+                { type: 'image', src: 'Assets/ISM/vida2.png', alt: 'ISM Vida 2' },
+                { type: 'image', src: 'Assets/ISM/vida3.png', alt: 'ISM Vida 3' },
+                { type: 'image', src: 'Assets/ISM/vida4.png', alt: 'ISM Vida 4' },
+                { type: 'video', src: 'Assets/ISM/vidavideo.mp4', alt: 'ISM Vida Video' }
+            ]
+        ],
         objectives: [
             "Aumentar la visibilidad de la marca en redes sociales",
             "Generar engagement con estudiantes potenciales",
@@ -28,49 +60,54 @@ const projectsData = {
     },
     casaterra: {
         title: "Casa Terra",
-        subtitle: "Estrategia Digital para Bienes Raíces",
-        description: "Desarrollo de identidad digital y estrategia de contenido para marca de bienes raíces enfocada en diseño, arquitectura y espacios de vida premium.",
-        video: "Assets/casaterra.mp4",
-        objectives: [
-            "Posicionar la marca como referente en bienes raíces de diseño",
-            "Crear una narrativa visual coherente y aspiracional",
-            "Atraer clientes de alto valor",
-            "Destacar la propuesta de valor arquitectónica"
+        subtitle: "Estrategia de contenido",
+        description: `Casaterra es una inmobiliaria chilena con un público bien definido: jóvenes y familias que están en la búsqueda de su primera propiedad.
+        
+Para conectar con ellos, convertí la información inmobiliaria —normalmente densa, fría y llena de tecnicismos— en contenido cercano, útil y altamente compartible.
+
+Partí de insights reales: sus dudas, temores y motivaciones. Luego lo fusioné con trends, formatos dinámicos y una narrativa más humana, logrando que temas complejos fluyeran naturalmente en el feed.
+
+Y cuando tocaba hablar de ventas, se hizo con estrategia: sin urgencias forzadas, mostrando valor, aclarando procesos y guiando de forma clara.
+
+Resultado: mayor crecimiento de comunidad, más interacción y un aumento sólido en leads calificados.`,
+        video: "Assets/CasaTerra/casaterra.mp4",
+        gallery: [
+            { type: 'video', src: 'Assets/CasaTerra/casaterra1.mp4', alt: 'CasaTerra Video 1' },
+            { type: 'video', src: 'Assets/CasaTerra/casaterra2.mp4', alt: 'CasaTerra Video 2' },
+            { type: 'video', src: 'Assets/CasaTerra/casaterra.mp4', alt: 'CasaTerra Video 3' },
+            { type: 'image', src: 'Assets/CasaTerra/casaterra1.png', alt: 'CasaTerra 1' },
+            { type: 'image', src: 'Assets/CasaTerra/casaterra2.png', alt: 'CasaTerra 2' },
+            { type: 'image', src: 'Assets/CasaTerra/casaterra3.png', alt: 'CasaTerra 3' },
+            { type: 'image', src: 'Assets/CasaTerra/casaterra4.png', alt: 'CasaTerra 4' },
+            { type: 'image', src: 'Assets/CasaTerra/casaterra5.png', alt: 'CasaTerra 5' },
+            { type: 'image', src: 'Assets/CasaTerra/casaterra6.png', alt: 'CasaTerra 6' }
         ],
-        services: [
-            "Estrategia de contenido visual",
-            "Gestión de Instagram",
-            "Fotografía de propiedades",
-            "Copywriting especializado",
-            "Diseño de feed aesthetic",
-            "Storytelling de marca"
-        ],
+
         results: [
-            { label: "Crecimiento de seguidores", value: "+12K" },
+            { label: "Crecimiento de seguidores", value: "+7K" },
             { label: "Engagement promedio", value: "12%" },
-            { label: "Leads generados", value: "+80" },
             { label: "Propiedades vendidas", value: "15" }
         ]
     },
     delicranch: {
-        title: "Delicranch",
-        subtitle: "Contenido Digital para Alimentos Saludables",
-        description: "Creación de estrategia de contenido y gestión de redes sociales para marca de alimentos saludables, enfocada en promover un estilo de vida wellness y alimentación consciente.",
-        video: "Assets/deli.mp4",
-        objectives: [
-            "Posicionar la marca en el sector de alimentos saludables",
-            "Educar sobre nutrición y vida saludable",
-            "Crear comunidad comprometida con el wellness",
-            "Impulsar ventas en puntos físicos y online"
+        title: "DeliKranch",
+        subtitle: "Estrategia de contenido",
+        description: `Delikrach es una nueva marca peruana de cereales lanzada por Industrias San Miguel. Mi misión fue acompañar su llegada al mercado creando una identidad digital fresca, clara y alineada a su propuesta de marca, capaz de conectar con su público desde el primer día.
+
+Desarrollé una estrategia basada en pilares de contenido y un copywriting coherente y atractivo, logrando una grilla ordenada, visualmente sólida y con un estilo reconocible.
+
+El crecimiento fue mayormente orgánico (alrededor del 85%) y los resultados se dieron rápido: pasamos de 0 a más de 2,000 seguidores en Instagram y cerca de 7,700 en Facebook.
+
+El resultado fue una presencia digital dinámica, cercana y en constante crecimiento, con una audiencia que conectó de manera natural desde el inicio.`,
+        video: "Assets/Delicranch/deli.mp4",
+        gallery: [
+            { type: 'video', src: 'Assets/Delicranch/1.mp4', alt: 'Delicranch Video 1' },
+            { type: 'image', src: 'Assets/Delicranch/1.png', alt: 'Delicranch 1' },
+            { type: 'video', src: 'Assets/Delicranch/2.mp4', alt: 'Delicranch Video 2' },
+            { type: 'image', src: 'Assets/Delicranch/2.png', alt: 'Delicranch 2' },
+            { type: 'image', src: 'Assets/Delicranch/3.png', alt: 'Delicranch 3' }
         ],
-        services: [
-            "Gestión de redes sociales",
-            "Creación de recetas y contenido nutricional",
-            "Fotografía de producto y food styling",
-            "Campañas digitales",
-            "Colaboraciones con influencers",
-            "Contenido educativo sobre nutrición"
-        ],
+
         results: [
             { label: "Alcance orgánico", value: "+200K" },
             { label: "Interacciones", value: "+25K" },
@@ -83,19 +120,12 @@ const projectsData = {
         subtitle: "Campañas de Telecomunicaciones",
         description: "Apoyo en creación de contenido y campañas digitales para operadora de telecomunicaciones, enfocado en promociones, lanzamientos de productos y engagement con clientes.",
         video: null,
-        objectives: [
-            "Comunicar beneficios de productos y servicios",
-            "Generar engagement con la audiencia joven",
-            "Apoyar campañas promocionales",
-            "Mantener presencia digital activa"
+        gallery: [
+            { type: 'image', src: 'Assets/Entel/entel1.png', alt: 'Entel 1' },
+            { type: 'image', src: 'Assets/Entel/entel2.png', alt: 'Entel 2' },
+            { type: 'image', src: 'Assets/Entel/entel3.png', alt: 'Entel 3' }
         ],
-        services: [
-            "Creación de contenido para redes sociales",
-            "Copywriting publicitario",
-            "Diseño de piezas gráficas",
-            "Coordinación de campañas digitales",
-            "Soporte en estrategia de contenido"
-        ],
+
         results: [
             { label: "Piezas creadas", value: "+500" },
             { label: "Campañas ejecutadas", value: "12" },
@@ -106,21 +136,35 @@ const projectsData = {
     max: {
         title: "Max",
         subtitle: "Contenido para Plataforma de Streaming",
-        description: "Creación de contenido creativo y copywriting para plataforma de streaming, promocionando estrenos, series y contenido exclusivo.",
+        description: `Max Lash es una marca peruana especializada en el cuidado de pestañas y cejas.
+Para potenciar su presencia digital, trabajé una estrategia con dos enfoques: aumentar su recordación y reforzar su imagen como un servicio premium.
+Mi rol fue diseñar y ejecutar la estrategia de contenido para sus redes y otros canales.
+
+Esto incluyó:
+
+Crear pilares de contenido enfocados en educación, cuidado y experiencia de servicio.
+
+Definir un tono escrito que reflejara exclusividad y calidad.
+
+Proponer formatos que aumentaran la interacción y la conexión con la audiencia.
+
+Resultados principales
+
+​Mayor interacción y una comunidad más activa.
+
+Posicionamiento sólido como marca de tratamientos de belleza exclusivo.
+
+Presencia digital fuerte, logrando que Max Lash permanezca en el “top of mind” del público en su catergoria.`,
         video: null,
-        objectives: [
-            "Promover estrenos y contenido exclusivo",
-            "Generar expectativa y conversación",
-            "Aumentar suscripciones",
-            "Mantener engagement constante"
+        gallery: [
+            { type: 'video', src: 'Assets/Max/video1.mp4', alt: 'Max Video 1' },
+            { type: 'image', src: 'Assets/Max/max1.png', alt: 'Max 1' },
+            { type: 'video', src: 'Assets/Max/video2.mp4', alt: 'Max Video 2' },
+            { type: 'image', src: 'Assets/Max/max2.png', alt: 'Max 2' },
+            { type: 'video', src: 'Assets/Max/video3.mp4', alt: 'Max Video 3' },
+            { type: 'image', src: 'Assets/Max/max3.png', alt: 'Max 3' }
         ],
-        services: [
-            "Copywriting creativo",
-            "Gestión de contenido en redes",
-            "Creación de campañas de lanzamiento",
-            "Diseño de piezas promocionales",
-            "Estrategia de contenido entertainment"
-        ],
+
         results: [
             { label: "Publicaciones creadas", value: "+300" },
             { label: "Alcance promedio", value: "500K" },
@@ -131,61 +175,166 @@ const projectsData = {
 };
 
 // Modal Functions
+let carouselIntervals = [];
+
+// Create vertical phone carousel (for ISM)
+function createCarouselHTML(slides, index) {
+    if (!slides || slides.length === 0) return '';
+
+    const slidesHTML = slides.map((slide, i) => {
+        let mediaContent = '';
+        if (slide.type === 'video') {
+            mediaContent = `<video src="${slide.src}" class="carousel-media" autoplay muted loop playsinline></video>`;
+        } else {
+            mediaContent = `<img src="${slide.src}" class="carousel-media" alt="Slide ${i + 1}">`;
+        }
+        return `<div class="carousel-slide">${mediaContent}</div>`;
+    }).join('');
+
+    const indicatorsHTML = slides.length > 1 ? `
+        <div class="carousel-indicators">
+            ${slides.map((_, i) => `<span class="carousel-dot dot-${index} ${i === 0 ? 'active' : ''}" onclick="goToSlide(${index}, ${i})"></span>`).join('')}
+        </div>
+    ` : '';
+
+    return `
+        <div class="phone-frame">
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack-${index}">
+                    ${slidesHTML}
+                </div>
+                ${indicatorsHTML}
+            </div>
+        </div>
+    `;
+}
+
+function startCarousel(slides, index) {
+    if (!slides || slides.length <= 1) return;
+
+    let currentIndex = 0;
+    const track = document.getElementById(`carouselTrack-${index}`);
+    const dots = document.querySelectorAll(`.dot-${index}`);
+
+    const updateCarousel = (slideIndex) => {
+        if (track) track.style.transform = `translateX(-${slideIndex * 100}%)`;
+        dots.forEach(dot => dot.classList.remove('active'));
+        if (dots[slideIndex]) dots[slideIndex].classList.add('active');
+    };
+
+    // Randomize start time slightly to avoid synch robotic feel
+    setTimeout(() => {
+        const interval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateCarousel(currentIndex);
+        }, 3000 + (index * 200));
+        carouselIntervals.push(interval);
+    }, index * 500);
+
+    // Global handler for this specific carousel instance
+    // Note: This global function approach is simplistic; ideally would be scoped better.
+    // For now we patch the global goToSlide to handle multiple IDs.
+}
+
+// Global scope helper
+window.goToSlide = (carouselIndex, slideIndex) => {
+    // We can't easily clear specific interval without mapping, so let's just 
+    // update the view and let the interval continue (or clear all to be safe).
+    // For simplicity: Update view immediately.
+    const track = document.getElementById(`carouselTrack-${carouselIndex}`);
+    const dots = document.querySelectorAll(`.dot-${carouselIndex}`);
+
+    if (track) track.style.transform = `translateX(-${slideIndex * 100}%)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    if (dots[slideIndex]) dots[slideIndex].classList.add('active');
+};
+
+
 function openProjectModal(projectId) {
     const project = projectsData[projectId];
     if (!project) return;
 
     const modal = document.getElementById('projectModal');
-    
+
     // Populate modal content
     document.querySelector('.project-modal-title').textContent = project.title;
     document.querySelector('.project-modal-subtitle').textContent = project.subtitle;
-    document.querySelector('.project-description').textContent = project.description;
-    
+    document.querySelector('.project-description').innerHTML = project.description.replace(/\n/g, '<br>');
+
     // Populate media
     const mediaContainer = document.querySelector('.project-modal-media');
-    if (project.video) {
-        mediaContainer.innerHTML = `<video src="${project.video}" autoplay loop muted playsinline class="project-modal-video"></video>`;
+
+    // Clear previous intervals
+    carouselIntervals.forEach(clearInterval);
+    carouselIntervals = [];
+    document.querySelector('.project-modal-media').innerHTML = ''; // Clear content
+
+    let contentHTML = '';
+    let galleriesToInit = [];
+
+    // Check if ISM (multiple galleries)
+    if (project.galleries) {
+        contentHTML += '<div class="carousel-grid">';
+        project.galleries.forEach((gallery, i) => {
+            contentHTML += createCarouselHTML(gallery, i);
+            galleriesToInit.push({ slides: gallery, index: i });
+        });
+        contentHTML += '</div>';
     } else {
-        mediaContainer.innerHTML = `<div class="project-modal-placeholder">
-            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                <polyline points="21 15 16 10 5 21"></polyline>
-            </svg>
-        </div>`;
+        // Standard single carousel
+        contentHTML += '<div class="phone-wrapper">';
+        let slides = [];
+        if (project.gallery && project.gallery.length > 0) {
+            slides = project.gallery;
+        } else if (project.video) {
+            slides.push({ type: 'video', src: project.video });
+        }
+
+        if (slides.length > 0) {
+            contentHTML += createCarouselHTML(slides, 0);
+            galleriesToInit.push({ slides: slides, index: 0 });
+        } else {
+            // Placeholder
+            contentHTML += `<div class="project-modal-placeholder">No Media</div>`;
+        }
+        contentHTML += '</div>';
     }
-    
-    // Populate objectives
-    const objectivesList = document.querySelector('.project-objectives');
-    objectivesList.innerHTML = project.objectives.map(obj => `<li>${obj}</li>`).join('');
-    
-    // Populate services
-    const servicesList = document.querySelector('.project-services');
-    servicesList.innerHTML = project.services.map(service => `<li>${service}</li>`).join('');
-    
+
+    mediaContainer.innerHTML = contentHTML;
+
+    // Start Carousels
+    galleriesToInit.forEach(item => {
+        startCarousel(item.slides, item.index);
+    });
+
+
     // Populate results
     const resultsGrid = document.querySelector('.project-results-grid');
-    resultsGrid.innerHTML = project.results.map(result => `
+    resultsGrid.innerHTML = project.results ? project.results.map(result => `
         <div class="result-item">
             <div class="result-value">${result.value}</div>
             <div class="result-label">${result.label}</div>
         </div>
-    `).join('');
-    
+    `).join('') : '';
+
     // Show modal
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
 function closeProjectModal() {
+    carouselIntervals.forEach(clearInterval);
+    carouselIntervals = [];
+
     const modal = document.getElementById('projectModal');
     modal.classList.remove('active');
     document.body.style.overflow = '';
+    document.querySelector('.project-modal-media').innerHTML = '';
 }
 
+
 // Close modal with ESC key
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') {
         closeProjectModal();
     }
