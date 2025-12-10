@@ -151,7 +151,7 @@
                                 Estrategia de contenido y gestión de redes sociales para marca de bienes raíces enfocada
                                 en diseño y arquitectura.
                             </p>
-                            <span class="project-link" onclick="openProjectModal('casaterra')"
+                            <span class="project-link" onclick="openHorizontalModal('casaterra')"
                                 style="cursor: pointer;">Ver detalles</span>
                         </div>
                     </article>
@@ -164,7 +164,8 @@
                             <p class="project-desc">
                                 Gestión integral de redes sociales y creación de contenido para Entel.
                             </p>
-                            <span class="project-link" onclick="openProjectModal('ism')" style="cursor: pointer;">Ver
+                            <span class="project-link" onclick="openHorizontalModal('entel')"
+                                style="cursor: pointer;">Ver
                                 detalles</span>
                         </div>
                     </article>
@@ -336,6 +337,24 @@
                         <div class="project-results-grid"></div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Horizontal Carousel Modal (for standard projects) -->
+    <div id="horizontalModal" class="project-modal" role="dialog" aria-modal="true"
+        aria-labelledby="horizontalModalTitle">
+        <div class="project-modal-overlay" onclick="closeHorizontalModal()"></div>
+        <div class="project-modal-content">
+            <button class="project-modal-close" onclick="closeHorizontalModal()" aria-label="Cerrar">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="project-modal-body">
+                <div class="horizontal-modal-media"></div>
             </div>
         </div>
     </div>

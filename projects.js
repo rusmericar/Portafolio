@@ -37,6 +37,7 @@ El resultado fue la creación constante de contenido de valor mediante posts int
                 { type: 'video', src: 'Assets/ISM/vidavideo.mp4', alt: 'ISM Vida Video' }
             ]
         ],
+
         objectives: [
             "Aumentar la visibilidad de la marca en redes sociales",
             "Generar engagement con estudiantes potenciales",
@@ -82,7 +83,10 @@ Resultado: mayor crecimiento de comunidad, más interacción y un aumento sólid
             { type: 'image', src: 'Assets/CasaTerra/casaterra5.png', alt: 'CasaTerra 5' },
             { type: 'image', src: 'Assets/CasaTerra/casaterra6.png', alt: 'CasaTerra 6' }
         ],
-
+        galleryNew: [
+            { type: 'image', src: 'Assets/CasaTerra/casaterra7.png', alt: 'Exclusiva 1' },
+            { type: 'image', src: 'Assets/CasaTerra/casaterra8.png', alt: 'Exclusiva 2' }
+        ],
         results: [
             { label: "Crecimiento de seguidores", value: "+7K" },
             { label: "Engagement promedio", value: "12%" },
@@ -125,7 +129,11 @@ El resultado fue una presencia digital dinámica, cercana y en constante crecimi
             { type: 'image', src: 'Assets/Entel/entel2.png', alt: 'Entel 2' },
             { type: 'image', src: 'Assets/Entel/entel3.png', alt: 'Entel 3' }
         ],
-
+        galleryNew: [
+            { type: 'image', src: 'Assets/Entel/entel1.png', alt: 'Exclusiva 1' },
+            { type: 'image', src: 'Assets/Entel/entel2.png', alt: 'Exclusiva 2' },
+            { type: 'image', src: 'Assets/Entel/entel3.png', alt: 'Exclusiva 2' }
+        ],
         results: [
             { label: "Piezas creadas", value: "+500" },
             { label: "Campañas ejecutadas", value: "12" },
@@ -330,6 +338,112 @@ function closeProjectModal() {
     modal.classList.remove('active');
     document.body.style.overflow = '';
     document.querySelector('.project-modal-media').innerHTML = '';
+}
+
+
+// Horizontal Modal Functions (for standard projects)
+let horizontalCarouselInterval;
+
+function openHorizontalModal(projectId) {
+    const project = projectsData[projectId];
+    if (!project) return;
+
+    const modal = document.getElementById('horizontalModal');
+
+    // Populate horizontal carousel only
+    const mediaContainer = modal.querySelector('.horizontal-modal-media');
+
+    // Clear previous interval
+    clearInterval(horizontalCarouselInterval);
+    mediaContainer.innerHTML = '';
+
+    let slides = [];
+    // Use galleryNew if exists, otherwise fall back to gallery
+    if (project.galleryNew && project.galleryNew.length > 0) {
+        slides = project.galleryNew;
+    } else if (project.gallery && project.gallery.length > 0) {
+        slides = project.gallery;
+    } else if (project.video) {
+        slides.push({ type: 'video', src: project.video });
+    }
+
+    if (slides.length > 0) {
+        // Generate Slides HTML
+        const slidesHTML = slides.map((slide, i) => {
+            let mediaContent = '';
+            if (slide.type === 'video') {
+                mediaContent = `<video src="${slide.src}" class="horizontal-carousel-media" autoplay muted loop playsinline></video>`;
+            } else {
+                mediaContent = `<img src="${slide.src}" class="horizontal-carousel-media" alt="Slide ${i + 1}">`;
+            }
+            return `<div class="horizontal-carousel-slide">${mediaContent}</div>`;
+        }).join('');
+
+        // Generate Indicators HTML
+        const indicatorsHTML = slides.length > 1 ? `
+            <div class="carousel-indicators">
+                ${slides.map((_, i) => `<span class="carousel-dot horizontal-dot ${i === 0 ? 'active' : ''}" onclick="goToHorizontalSlide(${i})"></span>`).join('')}
+            </div>
+        ` : '';
+
+        mediaContainer.innerHTML = `
+            <div class="horizontal-carousel-wrapper">
+                <div class="horizontal-carousel-frame">
+                    <div class="horizontal-carousel-container">
+                        <div class="horizontal-carousel-track" id="horizontalCarouselTrack">
+                            ${slidesHTML}
+                        </div>
+                        ${indicatorsHTML}
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Auto-advance Logic
+        if (slides.length > 1) {
+            let currentIndex = 0;
+            const track = document.getElementById('horizontalCarouselTrack');
+            const dots = document.querySelectorAll('.horizontal-dot');
+
+            const updateCarousel = (index) => {
+                if (track) track.style.transform = `translateX(-${index * 100}%)`;
+                dots.forEach(dot => dot.classList.remove('active'));
+                if (dots[index]) dots[index].classList.add('active');
+            };
+
+            horizontalCarouselInterval = setInterval(() => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateCarousel(currentIndex);
+            }, 3000);
+
+            // Global handler for manual navigation
+            window.goToHorizontalSlide = (index) => {
+                clearInterval(horizontalCarouselInterval);
+                currentIndex = index;
+                updateCarousel(currentIndex);
+                // Restart auto-play
+                horizontalCarouselInterval = setInterval(() => {
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    updateCarousel(currentIndex);
+                }, 3000);
+            };
+        }
+    } else {
+        mediaContainer.innerHTML = `<div class="project-modal-placeholder">No Media</div>`;
+    }
+
+    // Show modal
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeHorizontalModal() {
+    clearInterval(horizontalCarouselInterval);
+
+    const modal = document.getElementById('horizontalModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+    modal.querySelector('.horizontal-modal-media').innerHTML = '';
 }
 
 
