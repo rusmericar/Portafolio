@@ -358,7 +358,7 @@ header .container {
 
 .about-block h3 {
     font-size: 1.3rem;
-    color: var(--text-title);
+    color: var(--primary);
     margin-bottom: 8px;
     font-weight: 600;
 }
@@ -636,7 +636,7 @@ header .container {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     margin-bottom: 40px;
 }
 
@@ -662,7 +662,7 @@ header .container {
 }
 
 .contact-item span {
-    font-size: 1.4rem;
+    font-size: 1.0rem;
 }
 
 .social-links {
@@ -778,6 +778,13 @@ footer {
 
     .brands-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Centrar la última marca si es impar */
+    .brand-item:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        max-width: 50%;
+        margin: 0 auto;
     }
 
     .projects-grid {

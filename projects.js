@@ -2,15 +2,11 @@
 const projectsData = {
     ism: {
         title: "ISM - Industrias San Miguel",
-        subtitle: "Gestión de Redes Sociales y Contenido Educativo",
+        subtitle: "Piezas del plan de contenidos",
         description: `Industrias San Miguel (ISM) es un conglomerado peruano líder, dueño de marcas icónicas —como ORO, KR y Agua Vida— que gozan de una fuerte recordación en el mercado nacional. El desafío central fue elevar su presencia digital para lograr una interacción robusta y un alto engagement en redes sociales.
-
-​Estrategia y Desarrollo
 
 Mi trabajo se centró en la estrategia digital, iniciando con  benchmarking de la competencia y las tendencias del sector. Este análisis fue clave para definir pilares de contenido únicos que se alinearon de manera precisa con la personalidad y valores de cada marca.
 A partir de esta base estratégica, desarrollé una matriz de contenido sistemática con el objetivo claro de construir una comunidad activa alrededor de cada producto.
-
-​Resultados
 
 El resultado fue la creación constante de contenido de valor mediante posts interactivos y dinámicas que incentivaron la participación activa de la audiencia. Esto garantizó un flujo de contenido organizado, coherente y que se tradujo en un alto nivel de conexión y engagement con los consumidores.`,
         video: "Assets/ISM/ism.mp4",
@@ -61,7 +57,7 @@ El resultado fue la creación constante de contenido de valor mediante posts int
     },
     casaterra: {
         title: "Casa Terra",
-        subtitle: "Estrategia de contenido",
+        subtitle: "Piezas del plan de contenidos",
         description: `Casaterra es una inmobiliaria chilena con un público bien definido: jóvenes y familias que están en la búsqueda de su primera propiedad.
         
 Para conectar con ellos, convertí la información inmobiliaria —normalmente densa, fría y llena de tecnicismos— en contenido cercano, útil y altamente compartible.
@@ -95,7 +91,7 @@ Resultado: mayor crecimiento de comunidad, más interacción y un aumento sólid
     },
     delicranch: {
         title: "DeliKranch",
-        subtitle: "Estrategia de contenido",
+        subtitle: "Piezas del plan de contenidos",
         description: `Delikrach es una nueva marca peruana de cereales lanzada por Industrias San Miguel. Mi misión fue acompañar su llegada al mercado creando una identidad digital fresca, clara y alineada a su propuesta de marca, capaz de conectar con su público desde el primer día.
 
 Desarrollé una estrategia basada en pilares de contenido y un copywriting coherente y atractivo, logrando una grilla ordenada, visualmente sólida y con un estilo reconocible.
@@ -143,25 +139,19 @@ El resultado fue una presencia digital dinámica, cercana y en constante crecimi
     },
     max: {
         title: "Max",
-        subtitle: "Contenido para Plataforma de Streaming",
+        subtitle: "Piezas del plan de contenidos",
         description: `Max Lash es una marca peruana especializada en el cuidado de pestañas y cejas.
 Para potenciar su presencia digital, trabajé una estrategia con dos enfoques: aumentar su recordación y reforzar su imagen como un servicio premium.
 Mi rol fue diseñar y ejecutar la estrategia de contenido para sus redes y otros canales.
 
 Esto incluyó:
-
 Crear pilares de contenido enfocados en educación, cuidado y experiencia de servicio.
-
 Definir un tono escrito que reflejara exclusividad y calidad.
-
 Proponer formatos que aumentaran la interacción y la conexión con la audiencia.
 
-Resultados principales
-
+Resultados principales:
 ​Mayor interacción y una comunidad más activa.
-
 Posicionamiento sólido como marca de tratamientos de belleza exclusivo.
-
 Presencia digital fuerte, logrando que Max Lash permanezca en el “top of mind” del público en su catergoria.`,
         video: null,
         gallery: [
