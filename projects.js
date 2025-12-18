@@ -169,6 +169,36 @@ Presencia digital fuerte, logrando que Max Lash permanezca en el “top of mind�
             { label: "Engagement rate", value: "9.2%" },
             { label: "Campañas de estreno", value: "8" }
         ]
+    },
+    Community: {
+        title: "Community Manager",
+        subtitle: "¡Conectar con el público es emocionante!",
+        description: `Como Community Manager, mi principal misión es responder de manera alineada a la estrategia de marca, seguir de cerca los comentarios y descubrir valiosos insights para la creación de contenido. El objetivo es claro: convertir a nuestro target en seguidores leales apasionados de la marca.`,
+        video: null,
+        galleries: [
+            {
+                title: "Entel",
+                items: [
+                    { type: 'image', src: 'Assets/Entel/entel1.png', alt: 'ISM Asset 1' },
+                    { type: 'image', src: 'Assets/Entel/entel2.png', alt: 'ISM Asset 1' },
+                    { type: 'image', src: 'Assets/Entel/entel3.png', alt: 'ISM Asset 1' }
+                ]
+            },
+            {
+                title: "Casa Terra",
+                items: [
+                    { type: 'image', src: 'Assets/CasaTerra/casaterra7.png', alt: 'ISM Oro 1' },
+                    { type: 'image', src: 'Assets/CasaTerra/casaterra8.png', alt: 'ISM Oro 1' }
+                ]
+            }
+        ],
+
+        results: [
+            { label: "Publicaciones creadas", value: "+300" },
+            { label: "Alcance promedio", value: "500K" },
+            { label: "Engagement rate", value: "9.2%" },
+            { label: "Campañas de estreno", value: "8" }
+        ]
     }
 };
 
@@ -332,7 +362,7 @@ function closeProjectModal() {
 
 
 // Horizontal Modal Functions (for standard projects)
-let horizontalCarouselInterval;
+let horizontalCarouselIntervals = [];
 
 function openHorizontalModal(projectId) {
     const project = projectsData[projectId];
@@ -340,86 +370,65 @@ function openHorizontalModal(projectId) {
 
     const modal = document.getElementById('horizontalModal');
 
-    // Populate horizontal carousel only
+    // Populate title, subtitle, and description
+    modal.querySelector('#horizontalModalTitle').textContent = project.title;
+    modal.querySelector('.project-modal-subtitle').textContent = project.subtitle;
+    modal.querySelector('.horizontal-project-description').innerHTML = project.description.replace(/\n/g, '<br>');
+
+    // Populate horizontal carousel
     const mediaContainer = modal.querySelector('.horizontal-modal-media');
 
-    // Clear previous interval
-    clearInterval(horizontalCarouselInterval);
+    // Clear previous intervals
+    horizontalCarouselIntervals.forEach(clearInterval);
+    horizontalCarouselIntervals = [];
     mediaContainer.innerHTML = '';
 
-    let slides = [];
-    // Use galleryNew if exists, otherwise fall back to gallery
-    if (project.galleryNew && project.galleryNew.length > 0) {
-        slides = project.galleryNew;
-    } else if (project.gallery && project.gallery.length > 0) {
-        slides = project.gallery;
-    } else if (project.video) {
-        slides.push({ type: 'video', src: project.video });
-    }
+    // Check if project has multiple galleries (like Community)
+    if (project.galleries && project.galleries.length > 0) {
+        // Multiple horizontal carousels stacked vertically
+        let contentHTML = '<div class="horizontal-carousels-stack">';
 
-    if (slides.length > 0) {
-        // Generate Slides HTML
-        const slidesHTML = slides.map((slide, i) => {
-            let mediaContent = '';
-            if (slide.type === 'video') {
-                mediaContent = `<video src="${slide.src}" class="horizontal-carousel-media" autoplay muted loop playsinline></video>`;
-            } else {
-                mediaContent = `<img src="${slide.src}" class="horizontal-carousel-media" alt="Slide ${i + 1}">`;
+        project.galleries.forEach((gallery, galleryIndex) => {
+            // Check if gallery is an object with title and items, or just an array
+            let galleryItems = gallery.items || gallery;
+            let galleryTitle = gallery.title || null;
+
+            if (galleryItems.length > 0) {
+                contentHTML += createHorizontalCarouselHTML(galleryItems, galleryIndex, galleryTitle);
             }
-            return `<div class="horizontal-carousel-slide">${mediaContent}</div>`;
-        }).join('');
+        });
 
-        // Generate Indicators HTML
-        const indicatorsHTML = slides.length > 1 ? `
-            <div class="carousel-indicators">
-                ${slides.map((_, i) => `<span class="carousel-dot horizontal-dot ${i === 0 ? 'active' : ''}" onclick="goToHorizontalSlide(${i})"></span>`).join('')}
-            </div>
-        ` : '';
+        contentHTML += '</div>';
+        mediaContainer.innerHTML = contentHTML;
 
-        mediaContainer.innerHTML = `
-            <div class="horizontal-carousel-wrapper">
-                <div class="horizontal-carousel-frame">
-                    <div class="horizontal-carousel-container">
-                        <div class="horizontal-carousel-track" id="horizontalCarouselTrack">
-                            ${slidesHTML}
-                        </div>
-                        ${indicatorsHTML}
-                    </div>
-                </div>
-            </div>
-        `;
-
-        // Auto-advance Logic
-        if (slides.length > 1) {
-            let currentIndex = 0;
-            const track = document.getElementById('horizontalCarouselTrack');
-            const dots = document.querySelectorAll('.horizontal-dot');
-
-            const updateCarousel = (index) => {
-                if (track) track.style.transform = `translateX(-${index * 100}%)`;
-                dots.forEach(dot => dot.classList.remove('active'));
-                if (dots[index]) dots[index].classList.add('active');
-            };
-
-            horizontalCarouselInterval = setInterval(() => {
-                currentIndex = (currentIndex + 1) % slides.length;
-                updateCarousel(currentIndex);
-            }, 3000);
-
-            // Global handler for manual navigation
-            window.goToHorizontalSlide = (index) => {
-                clearInterval(horizontalCarouselInterval);
-                currentIndex = index;
-                updateCarousel(currentIndex);
-                // Restart auto-play
-                horizontalCarouselInterval = setInterval(() => {
-                    currentIndex = (currentIndex + 1) % slides.length;
-                    updateCarousel(currentIndex);
-                }, 3000);
-            };
-        }
+        // Initialize each carousel
+        project.galleries.forEach((gallery, galleryIndex) => {
+            let galleryItems = gallery.items || gallery;
+            if (galleryItems.length > 1) {
+                startHorizontalCarousel(galleryItems, galleryIndex);
+            }
+        });
     } else {
-        mediaContainer.innerHTML = `<div class="project-modal-placeholder">No Media</div>`;
+        // Single horizontal carousel (original behavior)
+        let slides = [];
+        // Use galleryNew if exists, otherwise fall back to gallery
+        if (project.galleryNew && project.galleryNew.length > 0) {
+            slides = project.galleryNew;
+        } else if (project.gallery && project.gallery.length > 0) {
+            slides = project.gallery;
+        } else if (project.video) {
+            slides.push({ type: 'video', src: project.video });
+        }
+
+        if (slides.length > 0) {
+            mediaContainer.innerHTML = createHorizontalCarouselHTML(slides, 0, null);
+
+            if (slides.length > 1) {
+                startHorizontalCarousel(slides, 0);
+            }
+        } else {
+            mediaContainer.innerHTML = `<div class="project-modal-placeholder">No Media</div>`;
+        }
     }
 
     // Show modal
@@ -427,13 +436,88 @@ function openHorizontalModal(projectId) {
     document.body.style.overflow = 'hidden';
 }
 
+// Helper function to create horizontal carousel HTML
+function createHorizontalCarouselHTML(slides, index, title = null) {
+    const slidesHTML = slides.map((slide, i) => {
+        let mediaContent = '';
+        if (slide.type === 'video') {
+            mediaContent = `<video src="${slide.src}" class="horizontal-carousel-media" autoplay muted loop playsinline></video>`;
+        } else {
+            mediaContent = `<img src="${slide.src}" class="horizontal-carousel-media" alt="Slide ${i + 1}">`;
+        }
+        return `<div class="horizontal-carousel-slide">${mediaContent}</div>`;
+    }).join('');
+
+    const indicatorsHTML = slides.length > 1 ? `
+        <div class="carousel-indicators">
+            ${slides.map((_, i) => `<span class="carousel-dot horizontal-dot-${index} ${i === 0 ? 'active' : ''}" onclick="goToHorizontalSlide(${index}, ${i})"></span>`).join('')}
+        </div>
+    ` : '';
+
+    const titleHTML = title ? `<h4 class="horizontal-carousel-title">${title}</h4>` : '';
+
+    return `
+        <div class="horizontal-carousel-wrapper">
+            ${titleHTML}
+            <div class="horizontal-carousel-frame">
+                <div class="horizontal-carousel-container">
+                    <div class="horizontal-carousel-track" id="horizontalCarouselTrack-${index}">
+                        ${slidesHTML}
+                    </div>
+                    ${indicatorsHTML}
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+// Helper function to start a horizontal carousel
+function startHorizontalCarousel(slides, index) {
+    let currentIndex = 0;
+    const track = document.getElementById(`horizontalCarouselTrack-${index}`);
+    const dots = document.querySelectorAll(`.horizontal-dot-${index}`);
+
+    const updateCarousel = (slideIndex) => {
+        if (track) track.style.transform = `translateX(-${slideIndex * 100}%)`;
+        dots.forEach(dot => dot.classList.remove('active'));
+        if (dots[slideIndex]) dots[slideIndex].classList.add('active');
+    };
+
+    const interval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel(currentIndex);
+    }, 3000);
+
+    horizontalCarouselIntervals.push(interval);
+
+    // Store the current index for this carousel
+    window[`horizontalCarouselIndex${index}`] = currentIndex;
+}
+
+// Global handler for manual navigation
+window.goToHorizontalSlide = (carouselIndex, slideIndex) => {
+    const track = document.getElementById(`horizontalCarouselTrack-${carouselIndex}`);
+    const dots = document.querySelectorAll(`.horizontal-dot-${carouselIndex}`);
+
+    if (track) track.style.transform = `translateX(-${slideIndex * 100}%)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    if (dots[slideIndex]) dots[slideIndex].classList.add('active');
+};
+
 function closeHorizontalModal() {
-    clearInterval(horizontalCarouselInterval);
+    // Clear all carousel intervals
+    horizontalCarouselIntervals.forEach(clearInterval);
+    horizontalCarouselIntervals = [];
 
     const modal = document.getElementById('horizontalModal');
     modal.classList.remove('active');
     document.body.style.overflow = '';
     modal.querySelector('.horizontal-modal-media').innerHTML = '';
+
+    // Clear title, subtitle, and description
+    modal.querySelector('#horizontalModalTitle').textContent = '';
+    modal.querySelector('.project-modal-subtitle').textContent = '';
+    modal.querySelector('.horizontal-project-description').innerHTML = '';
 }
 
 

@@ -493,8 +493,15 @@ header .container {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 32px;
+}
+
+/* Cuando hay un solo project-card, centrarlo */
+.project-card:only-child {
+    grid-column: 1 / -1;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .project-card {
@@ -1079,7 +1086,7 @@ body.dark-mode .theme-icon.moon {
 }
 
 .project-modal-header {
-    padding: 50px 60px 30px;
+    padding: 50px 60px 15px;
     background: var(--gradient-primary);
     color: white;
     border-radius: var(--radius-lg) var(--radius-lg) 0 0;
@@ -1102,7 +1109,7 @@ body.dark-mode .theme-icon.moon {
 
 .project-modal-title {
     font-size: 2.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     color: white;
     position: relative;
     z-index: 1;
@@ -1155,7 +1162,7 @@ body.dark-mode .theme-icon.moon {
 
 .project-modal-section h3 {
     font-size: 1.4rem;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

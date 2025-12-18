@@ -14,6 +14,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modal-styles-append.css">
 </head>
 
 <body>
@@ -43,7 +44,7 @@
                         creativa,
                         estrategias de social media y producción de contenido.
                         <br>
-                        Durante mis casi 3 años de experiencia, he desarrollado habilidades en las siguientes áreas:
+                        Durante mis 3 años de experiencia, he desarrollado habilidades en las siguientes áreas:
                     </p>
 
                     <div class="about-block">
@@ -120,10 +121,7 @@
                         <img src="Assets\Delicranch.png" alt="Logo Marca 2"
                             data-src-original="https://rusmericardenas.wixsite.com/.../marca2.jpg">
                     </div>
-                    <div class="brand-item" onclick="openProjectModal('entel')">
-                        <img src="Assets\Entel.png" alt="Logo Marca 3"
-                            data-src-original="https://rusmericardenas.wixsite.com/.../marca3.jpg">
-                    </div>
+
                     <div class="brand-item" onclick="openProjectModal('ism')">
                         <img src="Assets\ISM.png" alt="Logo Marca 4"
                             data-src-original="https://rusmericardenas.wixsite.com/.../marca4.jpg">
@@ -131,6 +129,10 @@
                     <div class="brand-item" onclick="openProjectModal('max')">
                         <img src="Assets\max.PNG" alt="Logo Marca 4"
                             data-src-original="https://rusmericardenas.wixsite.com/.../marca4.jpg">
+                    </div>
+                    <div class="brand-item" onclick="openHorizontalModal('Community')">
+                        <img src="Assets\Entel.png" alt="Logo Marca 3"
+                            data-src-original="https://rusmericardenas.wixsite.com/.../marca3.jpg">
                     </div>
                 </div>
             </div>
@@ -143,20 +145,20 @@
 
 
                     <article class="project-card">
-                        <img src="Assets\CasaTerra.png" class="project-img">
+                        <img src="Assets\Otros proyectos\Perfil.jpg" class="project-img">
 
                         <div class="project-info">
-                            <h3 class="project-title">Casa Terra</h3>
+                            <h3 class="project-title">Community Manager</h3>
                             <p class="project-desc">
-                                Estrategia de contenido y gestión de redes sociales para marca de bienes raíces enfocada
-                                en diseño y arquitectura.
+                                Gestión estratégica de las redes sociales para generar engagement, obtener insights y
+                                fidelizar a la audiencia.
                             </p>
-                            <span class="project-link" onclick="openHorizontalModal('casaterra')"
+                            <span class="project-link" onclick="openHorizontalModal('Community')"
                                 style="cursor: pointer;">Ver detalles</span>
                         </div>
                     </article>
 
-                    <article class="project-card">
+                    <!--   <article class="project-card">
                         <img src="Assets\Entel.png" class="project-img">
 
                         <div class="project-info">
@@ -169,7 +171,7 @@
                                 detalles</span>
                         </div>
                     </article>
-
+ -->
 
                 </div>
             </div>
@@ -314,7 +316,7 @@
             </div>
 
             <div class="project-modal-body">
-                <div class="project-modal-media"></div>
+
 
                 <div class="project-modal-info">
                     <div class="project-modal-section">
@@ -332,6 +334,7 @@
                         <ul class="project-services"></ul>
                     </div> -->
 
+                    <div class="project-modal-media"></div>
                     <div class="project-modal-section project-results">
                         <h3>Resultados</h3>
                         <div class="project-results-grid"></div>
@@ -353,7 +356,17 @@
                 </svg>
             </button>
 
+            <div class="project-modal-header">
+                <h2 id="horizontalModalTitle" class="project-modal-title"></h2>
+                <p class="project-modal-subtitle"></p>
+            </div>
+
             <div class="project-modal-body">
+                <div class="project-modal-section">
+                    <h3>Descripción</h3>
+                    <p class="horizontal-project-description"></p>
+                </div>
+                <br>
                 <div class="horizontal-modal-media"></div>
             </div>
         </div>
