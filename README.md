@@ -1,6 +1,6 @@
-# Portafolio Profesional - Rusmeri Cárdenas
+# Portafolio Profesional - Rusmeri Cardenas
 
-¡Hola! Soy Rusmeri Cárdenas, publicista especializada en marketing digital, redacción creativa y estrategias de social media. Este repositorio contiene el código fuente de mi portafolio profesional personal.
+¡Hola! Soy Rusmeri Cardenas, publicista especializada en marketing digital, redacción creativa y estrategias de social media. Este repositorio contiene el código fuente de mi portafolio profesional personal.
 
 ## 📋 Descripción
 
