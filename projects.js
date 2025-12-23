@@ -49,16 +49,15 @@ El resultado fue la creación constante de contenido de valor mediante posts int
             "Campañas de captación digital"
         ],
         results: [
-            { label: "Alcance mensual", value: "+150K" },
-            { label: "Engagement rate", value: "8.5%" },
-            { label: "Nuevos seguidores", value: "+5K" },
-            { label: "Consultas generadas", value: "+300" }
+            { label: "Seguidores activos", value: "+21K" },
+            { label: "Engagement rate", value: "12%" },
+            { label: "Nuevos seguidores", value: "+5K" }
         ]
     },
     casaterra: {
         title: "Casa Terra",
         subtitle: "Piezas del plan de contenidos",
-        description: `Casaterra es una inmobiliaria chilena con un público bien definido: jóvenes y familias que están en la búsqueda de su primera propiedad.
+        description: `Casaterra es una inmobiliaria chilena con un público definido: jóvenes y familias que están en la búsqueda de su primera propiedad.
         
 Para conectar con ellos, convertí la información inmobiliaria —normalmente densa, fría y llena de tecnicismos— en contenido cercano, útil y altamente compartible.
 
@@ -85,7 +84,7 @@ Resultado: mayor crecimiento de comunidad, más interacción y un aumento sólid
         ],
         results: [
             { label: "Crecimiento de seguidores", value: "+7K" },
-            { label: "Engagement promedio", value: "12%" },
+            { label: "Engagement rate", value: "12%" },
             { label: "Propiedades vendidas", value: "15" }
         ]
     },
@@ -109,10 +108,9 @@ El resultado fue una presencia digital dinámica, cercana y en constante crecimi
         ],
 
         results: [
-            { label: "Alcance orgánico", value: "+200K" },
-            { label: "Interacciones", value: "+25K" },
-            { label: "Aumento en ventas", value: "35%" },
-            { label: "Seguidores activos", value: "+8K" }
+            { label: "Seguidores activos", value: "+2K" },
+            { label: "Engagement promedio", value: "8%" },
+            { label: "Aumento en ventas", value: "35%" }
         ]
     },
     entel: {
@@ -144,15 +142,12 @@ El resultado fue una presencia digital dinámica, cercana y en constante crecimi
 Para potenciar su presencia digital, trabajé una estrategia con dos enfoques: aumentar su recordación y reforzar su imagen como un servicio premium.
 Mi rol fue diseñar y ejecutar la estrategia de contenido para sus redes y otros canales.
 
-Esto incluyó:
-Crear pilares de contenido enfocados en educación, cuidado y experiencia de servicio.
+Esto incluyó, crear pilares de contenido enfocados en educación, cuidado y experiencia de servicio.
 Definir un tono escrito que reflejara exclusividad y calidad.
 Proponer formatos que aumentaran la interacción y la conexión con la audiencia.
 
-Resultados principales:
-​Mayor interacción y una comunidad más activa.
-Posicionamiento sólido como marca de tratamientos de belleza exclusivo.
-Presencia digital fuerte, logrando que Max Lash permanezca en el “top of mind” del público en su catergoria.`,
+Los resultados principales fueron, mayor interacción, una comunidad más activa y un posicionamiento sólido como marca de tratamientos de belleza exclusivo.
+Tambien se logró una presencia digital fuerte, logrando que Max Lash permanezca en el “top of mind” del público en su catergoria.`,
         video: null,
         gallery: [
             { type: 'video', src: 'Assets/Max/video1.mp4', alt: 'Max Video 1' },
@@ -164,10 +159,10 @@ Presencia digital fuerte, logrando que Max Lash permanezca en el “top of mind�
         ],
 
         results: [
-            { label: "Publicaciones creadas", value: "+300" },
-            { label: "Alcance promedio", value: "500K" },
+            { label: "Seguidores activos", value: "+56K" },
             { label: "Engagement rate", value: "9.2%" },
-            { label: "Campañas de estreno", value: "8" }
+            { label: "Nuevos Seguidores", value: "+10K" }
+
         ]
     },
     Community: {

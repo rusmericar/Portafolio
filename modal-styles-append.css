@@ -171,7 +171,8 @@
     display: inline-block;
 }
 
-.project-description {
+.project-description,
+.horizontal-project-description {
     font-size: 1.1rem;
     line-height: 1.8;
     color: var(--text-muted);
@@ -438,4 +439,19 @@
     .horizontal-carousel-media {
         max-height: 250px;
     }
+}
+
+/* Specific style for the moved subtitle in Project Details Modal */
+.project-modal-info .project-modal-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    text-align: center;
+    font-weight: 700;
+    opacity: 1;
+    width: 100%;
 }
