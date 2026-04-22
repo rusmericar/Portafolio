@@ -122,7 +122,7 @@ html {
 body {
     font-family: 'Inter', 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     color: var(--text-main);
-    background: linear-gradient(135deg, #f7f8fc 0%, #e9ecf5 100%);
+    background: rgb(255, 255, 255);
     line-height: 1.7;
     overflow-x: hidden;
 }
@@ -273,8 +273,8 @@ header .container {
 .btn {
     display: inline-block;
     padding: 16px 48px;
-    background: white;
-    color: var(--primary);
+    background: var(--gradient-primary);
+    color: white;
     border-radius: 50px;
     font-weight: 700;
     cursor: pointer;
@@ -576,27 +576,66 @@ header .container {
 }
 
 .project-link {
-    font-weight: 700;
-    background: var(--gradient-accent);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    padding: 12px 28px;
     font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    position: relative;
-    display: inline-block;
-}
-
-.project-link::after {
-    content: '→';
-    margin-left: 8px;
-    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 0.3px;
     transition: var(--transition-base);
+    cursor: pointer;
+    width: fit-content;
+    margin: 0 auto;
+    text-decoration: none;
 }
 
-.project-card:hover .project-link::after {
-    transform: translateX(4px);
+.project-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Glass Button Unified Style */
+.btn-glass {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    padding: 12px 28px;
+    font-size: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 0.3px;
+    transition: var(--transition-base);
+    cursor: pointer;
+    width: fit-content;
+    margin: 0 auto;
+    text-decoration: none;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.btn-glass:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+#contact .btn-glass {
+    font-family: 'Inter', 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* --- CONTACT --- */
@@ -670,6 +709,34 @@ header .container {
 
 .contact-item span {
     font-size: 1.0rem;
+}
+
+#contact .btn {
+    padding: 12px 28px;
+    font-size: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 0.3px;
+    width: fit-content;
+}
+
+#contact .btn-small {
+    padding: 12px 28px;
+    font-size: 0.9rem;
+}
+
+#contact .btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.btn-small {
+    padding: 12px 28px !important;
+    font-size: 0.9rem !important;
+    text-transform: capitalize !important;
+    letter-spacing: 0.3px !important;
 }
 
 .social-links {

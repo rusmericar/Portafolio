@@ -136,7 +136,7 @@ El resultado fue una presencia digital dinámica, cercana y en constante crecimi
         ]
     },
     max: {
-        title: "Max",
+        title: "Max Lash",
         subtitle: "Piezas del plan de contenidos",
         description: `Max Lash es una marca peruana especializada en el cuidado de pestañas y cejas.
 Para potenciar su presencia digital, trabajé una estrategia con dos enfoques: aumentar su recordación y reforzar su imagen como un servicio premium.
@@ -167,8 +167,8 @@ Tambien se logró una presencia digital fuerte, logrando que Max Lash permanezca
     },
     Community: {
         title: "Community Manager",
-        subtitle: 
-        description: Mi principal misión es responder de manera alineada a la estrategia de marca, seguir de cerca los comentarios y descubrir valiosos insights para la creación de contenido. El objetivo es claro: convertir a nuestro target en seguidores leales apasionados de la marca.`,
+        subtitle: "",
+        description: `Mi principal misión es responder de manera alineada a la estrategia de marca, seguir de cerca los comentarios y descubrir valiosos insights para la creación de contenido. El objetivo es claro: convertir a nuestro target en seguidores leales apasionados de la marca.`,
         video: null,
         galleries: [
             {
