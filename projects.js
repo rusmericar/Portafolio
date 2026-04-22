@@ -167,8 +167,8 @@ Tambien se logró una presencia digital fuerte, logrando que Max Lash permanezca
     },
     Community: {
         title: "Community Manager",
-        subtitle: "¡Conectar con el público es emocionante!",
-        description: `Como Community Manager, mi principal misión es responder de manera alineada a la estrategia de marca, seguir de cerca los comentarios y descubrir valiosos insights para la creación de contenido. El objetivo es claro: convertir a nuestro target en seguidores leales apasionados de la marca.`,
+        subtitle: 
+        description: Mi principal misión es responder de manera alineada a la estrategia de marca, seguir de cerca los comentarios y descubrir valiosos insights para la creación de contenido. El objetivo es claro: convertir a nuestro target en seguidores leales apasionados de la marca.`,
         video: null,
         galleries: [
             {
