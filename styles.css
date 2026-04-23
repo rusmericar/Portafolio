@@ -616,7 +616,7 @@ header .container {
     padding: 12px 28px;
     font-size: 0.9rem;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: capitalize;
     letter-spacing: 0.3px;
     transition: var(--transition-base);
@@ -636,11 +636,12 @@ header .container {
 
 #contact .btn-glass {
     font-family: 'Inter', 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: rgba(123, 61, 154, 0.6);
 }
 
 /* --- CONTACT --- */
 #contact {
-    background: var(--gradient-cool);
+    background: linear-gradient(180deg, #9B59B6 0%, #B77FD1 100%);
     background-size: 200% 200%;
     animation: gradient 15s ease infinite;
     color: white;
@@ -692,13 +693,14 @@ header .container {
     justify-content: center;
     gap: 12px;
     padding: 16px 32px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(123, 61, 154, 0.6);
     backdrop-filter: blur(10px);
     border-radius: 50px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: var(--transition-base);
     max-width: 500px;
     margin: 0 auto;
+    font-weight: 700;
 }
 
 .contact-item:hover {
@@ -715,7 +717,7 @@ header .container {
     padding: 12px 28px;
     font-size: 0.9rem;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: capitalize;
     letter-spacing: 0.3px;
     width: fit-content;
